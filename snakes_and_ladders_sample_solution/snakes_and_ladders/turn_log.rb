@@ -13,7 +13,7 @@ class TurnLog
 
     result = :ladder if @modifier > 0
     result = :snake if @modifier < 0
-      
+
     return result
-  end
+  end #note: This is the modifier function
 end

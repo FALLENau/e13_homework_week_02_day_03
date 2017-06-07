@@ -26,7 +26,7 @@ class Game
     update_current_player
   end
 
-  def update_log(spaces, modifier)
+  def update_log(spaces, modifier)#note: modifier call
     @log << TurnLog.new(player: @current_player, roll: spaces, modifier: modifier)
   end
 
@@ -43,7 +43,7 @@ class Game
   def validate_movement(spaces)
     distance_to_end = @board.win_tile - @current_player.position
     movement = spaces > distance_to_end ? distance_to_end : spaces
-    return movement
+    return movement #note: finish line save for array platform
   end
 
   def is_won?
